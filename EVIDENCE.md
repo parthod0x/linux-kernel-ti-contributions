@@ -106,6 +106,15 @@ Patch link:
 
 https://github.com/torvalds/linux/commit/26d9be11485ea8c1102c3e8eaa7667412eef4950.patch
 
+Additional Linux-MTD review context:
+
+https://lists.infradead.org/pipermail/linux-mtd/2011-April/035258.html
+
+Stable-review mirrors:
+
+https://lkml.iu.edu/1106.0/00080.html  
+https://lkml.iu.edu/1106.0/00139.html
+
 ### What this shows
 
 The final fix was merged into mainline Linux.
@@ -204,6 +213,12 @@ Parth participated in a TI E2E discussion about replacing the default 16-bit NAN
 
 The thread discusses CS0BW, 8-bit / 16-bit NAND bus-width selection, GPMC behavior, and board-level runtime configuration.
 
+The thread also records that TI had earlier used the CS0BW switch in an inverted/backward-compatible manner for 8-bit / 16-bit NAND detection, then planned to rectify the code so CS0BW OFF corresponded to 8-bit NAND and CS0BW ON corresponded to 16-bit NAND.
+
+Parth also pointed to an Arago `linux-omap3` reference for the CS0BW behavior change:
+
+http://arago-project.org/git/projects/?p=linux-omap3.git;a=commit;h=3064bce8324f67a6ac64b97ddf89e92b8aaf22b3
+
 ### Claim supported
 
 Parth’s public TI support footprint includes NAND bus-width configuration and board-level flash interface bring-up for DM816x platforms.
@@ -277,6 +292,64 @@ Parth’s public TI support footprint includes U-Boot, MMC / SD boot performance
 
 ---
 
+## 11. DM8168 EVM Boot-Option / GPMC Bus-Width Thread
+
+**Topic:** DM8168 EVM boot option
+**Source:** TI E2E forum
+
+Link:
+
+https://e2e.ti.com/support/processors-group/processors/f/processors-forum/139834/dm8168-evm-boot-option
+
+### What this shows
+
+Parth participated in a TI E2E discussion about DM8168 EVM boot-option switch configuration, GPMC bus-width behavior, and NAND boot-mode interpretation.
+
+The user asked why the documented NAND boot-mode switch setting appeared to indicate 8-bit NAND even though the board NAND was 16-bit.
+
+Parth explained that earlier U-Boot and kernel support assumed 16-bit NAND, so the GPMC bus-width switch was not used to configure anything. In a later release, TI added 8-bit NAND support and used the GPMC bus-width switch to support both 8-bit and 16-bit NAND, while maintaining backward compatibility with previous releases.
+
+### Claim supported
+
+Parth’s public TI support footprint includes DM8168 EVM boot-option interpretation, GPMC bus-width behavior, and 8-bit / 16-bit NAND release-compatibility guidance.
+
+### Claim boundary
+
+This is support evidence and release-behavior explanation, not a standalone upstream Linux patch attribution.
+
+---
+
+## 12. DM816x / AM389x Board-Hang / Boot-Mode Diagnostics Thread
+
+**Topic:** TI DM816x / AM389x EVM board hangs while booting
+**Source:** TI E2E forum
+
+Link:
+
+https://e2e.ti.com/support/processors-group/processors/f/processors-forum/161332/ti-dm816x-am389x-evm-board-hangs-while-booting
+
+### What this shows
+
+Parth participated in TI E2E board-bring-up troubleshooting for a DM816x / AM389x EVM boot hang around `omap2-nand driver initializing`.
+
+The boot logs in the thread also show SPI flash detection through `m25p80 spi1.0` and MTD partition creation for SPI flash before NAND initialization.
+
+Parth advised that the issue did not look like a NAND-driver software issue and suggested checking:
+
+* whether the NAND switch was turned on
+* whether the NAND bus-width switch was set appropriately for the 8-bit / 16-bit NAND used
+* whether boot-mode pins were set appropriately
+
+### Claim supported
+
+Parth’s public TI support footprint includes board-level boot diagnostics across NAND, SPI flash boot logs, NAND bus-width switching, and boot-mode pin configuration on DM816x / AM389x EVM platforms.
+
+### Claim boundary
+
+This is support and diagnostic evidence, not a standalone upstream Linux patch attribution.
+
+---
+
 ## Consolidated Evidence-Based Claim
 
 The strongest verified claim is:
@@ -298,3 +371,5 @@ The broader public evidence supports work and support across:
 * U-Boot / MMC / SD boot support
 * TI81xx clock-frequency configuration
 * TI E2E customer-facing embedded Linux troubleshooting
+* DM8168 boot-option and GPMC bus-width behavior
+* DM816x / AM389x boot-mode and switch-level diagnostics
