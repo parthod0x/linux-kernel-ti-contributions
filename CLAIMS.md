@@ -8,13 +8,13 @@ Credited in mainline Linux for reporting, testing, and acknowledging a Linux MTD
 
 ## GitHub Profile Version
 
-Public, attributable embedded Linux work from the Texas Instruments period across Linux MTD/NAND, OMAP/TI81xx platform support, NAND bad-block handling, 8-bit / 16-bit NAND bus-width behavior, UBI/UBIFS support, TI EVM bring-up, and U-Boot/MMC clocking.
+Public, attributable embedded Linux work from the Texas Instruments period across Linux MTD/NAND, OMAP/TI81xx platform support, NAND bad-block handling, 8-bit / 16-bit NAND bus-width behavior, GPMC/CS0BW behavior, boot-mode diagnostics, UBI/UBIFS support, TI EVM bring-up, and U-Boot/MMC clocking.
 
 Credited in mainline Linux with `Reported-by`, `Tested-by`, and `Acked-by` tags for the NAND/MTD fix `mtd: return badblockbits back`.
 
 ## Resume Version
 
-Contributed to embedded Linux and TI SoC platform enablement across Linux MTD/NAND, OMAP/TI81xx board support, NAND bad-block handling, 8-bit / 16-bit NAND bus-width configuration, UBI/UBIFS support, and U-Boot/MMC clocking. Credited in mainline Linux with `Reported-by`, `Tested-by`, and `Acked-by` tags for identifying and validating the upstream NAND/MTD regression fix `mtd: return badblockbits back`.
+Contributed to embedded Linux and TI SoC platform enablement across Linux MTD/NAND, OMAP/TI81xx board support, NAND bad-block handling, 8-bit / 16-bit NAND bus-width configuration, GPMC/CS0BW behavior, boot-mode diagnostics, UBI/UBIFS support, and U-Boot/MMC clocking. Credited in mainline Linux with `Reported-by`, `Tested-by`, and `Acked-by` tags for identifying and validating the upstream NAND/MTD regression fix `mtd: return badblockbits back`.
 
 ## Detailed Professional Version
 
