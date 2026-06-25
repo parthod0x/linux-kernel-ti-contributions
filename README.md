@@ -45,6 +45,8 @@ Public records show work and support across:
 - U-Boot / MMC / SD boot performance support
 - TI81xx MMC clock-frequency configuration
 - Customer-facing embedded Linux troubleshooting through TI E2E
+- DM8168 EVM NAND boot-option and GPMC bus-width explanation
+- DM816x / AM389x boot-mode, NAND switch, and board-level bring-up diagnostics
 
 ## Evidence Index
 
@@ -96,10 +98,16 @@ https://e2e.ti.com/support/processors-group/processors/f/processors-forum/106504
 
 https://e2e.ti.com/support/processors-group/processors/f/processors-forum/144654/how-fast-is-your-sd-read-from-u-boot
 
+11. DM8168 EVM boot-option / GPMC bus-width thread
+
+https://e2e.ti.com/support/processors-group/processors/f/processors-forum/139834/dm8168-evm-boot-option
+
+12. DM816x / AM389x board-hang / boot-mode diagnostics thread
+
+https://e2e.ti.com/support/processors-group/processors/f/processors-forum/161332/ti-dm816x-am389x-evm-board-hangs-while-booting
+
 ## Claim Boundary
 
 Parth identified, reported, tested, and acknowledged a Linux MTD/NAND bad-block regression fix that was merged into mainline Linux, and is credited in the upstream Linux kernel.
 
-Parth also showcased a broader embedded Linux public profile around TI SoC platform enablement, NAND/MTD support, OMAP/TI81xx board bring-up, flash boot media, UBI/UBIFS support, NAND bus-width configuration, and U-Boot/MMC clocking.
-
-This repository does not rewrite authorship of upstream commits. It preserves public attribution and links to the original upstream sources.
+Parth also showcased a broader embedded Linux profile around TI SoC platform enablement, NAND/MTD support, OMAP/TI81xx board bring-up, flash boot media, UBI/UBIFS support, NAND bus-width configuration, GPMC/CS0BW behavior, boot-mode diagnostics, and U-Boot/MMC clocking.
