@@ -1,6 +1,6 @@
-# Linux Kernel and Texas Instruments Embedded Linux Contributions
+# Linux Kernel and Texas Instruments Embedded Linux Contributions — Parth
 
-This repository documents verified public Linux kernel, Linux-MTD, and Texas Instruments embedded Linux work attributed to Parth Mauria Saxena under `parth.saxena@ti.com` and related TI public support records.
+This repository documents verified public Linux kernel, Linux-MTD, and Texas Instruments embedded Linux work attributed to Parth Mauria Saxena / Parth Saxena under `parth.saxena@ti.com` and related TI public support records.
 
 The purpose of this repository is evidentiary and archival: to collect links, context, and claim boundaries around publicly visible contributions across Linux MTD/NAND, OMAP/TI81xx platforms, NAND bad-block handling, 8-bit / 16-bit NAND bus-width behavior, UBI/UBIFS support, TI EVM bring-up, and U-Boot/MMC clocking support.
 
@@ -10,7 +10,15 @@ Parth is credited in mainline Linux for the NAND/MTD fix:
 
 **`mtd: return badblockbits back`**
 
-The merged upstream Linux commit credits Parth’s original Linux-MTD RFC:
+The merged upstream Linux commit credits Parth as:
+
+```text
+Reported-by: Saxena, Parth <parth.saxena@ti.com>
+Tested-by: Saxena, Parth <parth.saxena@ti.com>
+Acked-by: Saxena, Parth <parth.saxena@ti.com>
+```
+
+This followed Parth’s original Linux-MTD RFC:
 
 [RFC] mtd: nand: Fix bad block identification issue
 
